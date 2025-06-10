@@ -12,13 +12,15 @@
         <div class="container">
             <nav>
                 <img src="images\logo_AT.png" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>   
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Welcome to My Portfolio</p>
@@ -122,15 +124,18 @@
                     <img src="images\software architecture.jpg">
                     <div class="layer">
                         <h3>Multimodal human detection using DL Methods</h3>
-                        <p>Multimodal IMges used to detect human in disastorous situations using the capability of Vison Transformers</p>
+                        <p>A deep learning model built using RGB, thermal, and infrared images to detect humans in disaster zones. 
+                            The system uses a Swin Transformer and custom preprocessing to work in low-visibility conditions like smoke or fog. 
+                            Ideal for UAV-based rescue and surveillance.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="project-item">
                     <img src="images\node mcu.jpg" >
                     <div class="layer">
-                        <h3>IoT based IV bag monitering</h3>
-                        <p>IoT used IV Bag monitering in medical field for remote moitering and fast response.</p>
+                        <h3>IoT-Based IV Bag Monitoring System</h3>
+                        <p>A real-time monitoring solution using ESP32 and sensors to detect IV fluid levels, preventing air embolism risks. 
+                            Alerts are sent via Wi-Fi to medical staff, ensuring timely intervention and</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                     
@@ -138,8 +143,9 @@
                 <div class="project-item">
                     <img src="images\1c_simulation.png">
                     <div class="layer">
-                        <h3>Verilog Projects</h3>
-                        <p>Verilog Implementation of different Finite State Mchines and Communication Protocols.</p>
+                        <h3>Verilog Implementation of FSMs</h3>
+                        <p>Designed UART Receiver and PWM Controller using Verilog and Intel Quartus.
+                         These FSMs improve serial communication and motor control efficiency, suitable for embedded and low-power applications.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                     
@@ -196,5 +202,14 @@
     }    
 
   </script>  
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+    </script>
 </body>
 </html>
