@@ -374,6 +374,8 @@ nav .fa-solid.fa-xmark{
     .header-text{
         margin-top: 100%;
         font-size: 16px;
+    }#logo-light{
+        display: none;
     }
     .header-text h1{
         font-size: 30px;
@@ -462,8 +464,14 @@ body.light-mode nav ul li a {
 body.light-mode nav ul li a::after {
   background: #BE5985;
 }
+body.light-mode .header-text h1 {
+  color: #a73466;
+}   
 body.light-mode .header-text h1 span {
-  color: #BE5985;
+  color: #bd0454;
+}
+body.light-mode .header-text p{
+  color: #5c0329;
 }
 body.light-mode #skills h1{
     color: #BE5985;
