@@ -11,6 +11,22 @@ body{
     background: #080808;
     color: #fff;
 }
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  z-index: 999;
+ transition: transform 0.3s ease;
+}
+#theme-toggle:active{
+    transform: scale(0.9);
+}
+
 #header{
     width: 100%;
     height: 100vh;
@@ -100,7 +116,7 @@ header-text h1{
 
 }
 .about-col-2 p{
-    font-size: 20px;
+    font-size: 15px;
 }
 .subtitle{
     font-size: 70px;
@@ -208,6 +224,8 @@ header-text h1{
 }
 .project-item img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 15px;
     display: block;
     transition: transform 0.5s;
@@ -410,3 +428,106 @@ nav .fa-solid.fa-xmark{
         font-size: 14px;
     }
 }
+/*-----------------CSS for light mode------------------*/
+body.light-mode {
+  background-color: #FFEDFA;
+  color: #BE5985;
+}
+body.light-mode #header {
+  background-color: #FFEDFA;
+}
+body.light-mode #about {
+  background-color: #FFEDFA;
+}
+body.light-mode .about-img {
+  filter: brightness(0.8);
+}
+body.light-mode .about-col-2 h1 {
+  color: #BE5985;
+}
+body.light-mode nav {
+  background-color: #FFEDFA;
+}
+body.light-mode nav ul {
+  background-color: #FFEDFA;
+  right: -200px; /* Ensure the menu is hidden initially */
+}
+body.light-mode nav ul li a {
+  color: #BE5985;
+}
+body.light-mode nav ul li a::after {
+  background: #BE5985;
+}
+body.light-mode .header-text h1 span {
+  color: #BE5985;
+}
+body.light-mode #skills h1{
+    color: #BE5985;
+  
+}
+body.light-mode .skills-list div {
+  background-color: #F5F5F5;
+  color: #BE5985;
+}
+body.light-mode .skills-list div:hover {
+  background: #BE5985;
+  color: #F1F516;
+}
+body.light-mode .projects {
+  background: #FFEDFA;
+}
+body.light-mode #projects h1 {
+  color: #BE5985;
+}
+body.light-mode #projects h3{
+    color: #faf9f8;
+}
+body.light-mode #projects p{
+  color: #F1F516;
+}
+body.light-mode .project-item img {
+  filter: brightness(0.8);
+}
+body.light-mode .layer {
+  background: linear-gradient(rgba(228, 24, 126, 0.6), #5f012a);
+}
+body.light-mode .layer a {
+  color: #BE5985;
+}
+body.light-mode .btn {
+  border: 1px solid #BE5985;
+  color: #BE5985;
+}
+body.light-mode .btn:hover {
+  background: #BE5985;
+  color: #F1F516;
+}
+body.light-mode #contact {
+  background: #FFEDFA;
+}
+body.light-mode #contact h1 {
+  color: #BE5985;
+}
+body.light-mode .contact-left p i {
+  color: #BE5985;
+}
+body.light-mode .social-icons a {
+  color: #BE5985;
+}
+body.light-mode form input,
+body.light-mode form textarea {
+  background: #f1a1a1;
+  color: #BE5985;
+}
+body.light-mode form .btn2 {
+  background: #BE5985;
+  color: #F1F516;
+}
+body.light-mode .copyright {
+  background: #F5F5F5;
+  color: #BE5985;
+}
+body.light-mode #msg {
+  color: #61b752;
+}
+
