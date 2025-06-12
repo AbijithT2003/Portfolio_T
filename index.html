@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO WEBSITE ABIJITH T</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/357a5d6e82.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,6 +27,9 @@
                 <p>Welcome to My Portfolio</p>
                 <h1>Hi ,I'm <span>Abijith T.</span></h1>
             </div>
+            <button id="theme-toggle">
+                <i class="fas fa-moon" onclick="switchTheme()"></i>
+            </button>
         </div>
     </div>
 
@@ -43,18 +47,10 @@
                          With hands-on experience in tools like Raspberry Pi, ESP32, and FPGAs, I enjoy building intelligent systems that solve practical problems. 
                         I'm constantly exploring the intersection of AI and edge devices, and I believe in using technology responsibly to create meaningful impact.</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab(event,'skills')">skills</p>
-                        <p class="tab-links" onclick="openTab(event,'experience')">Experience</p>
+                        <p class="tab-links active link" onclick="openTab(event,'experience')">Experience</p>
                         <p class="tab-links" onclick="openTab(event,'education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id="skills" >
-                        <ul>
-                            <li><span>Deep Learning & Computer Vision</span><br>Computer interfacing for image processing</li>
-                            <li><span>Embedded Systems</span><br>Experience with Raspberry Pi, ESP32, Arduino, Verilog, Intel Quartus & Xilinx FPGA toolchains.</li>
-                            <li><span>Programming Languages</span><br> Python, C, Verilog, HTML/CSS/JavaScript.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
+                    <div class="tab-contents active tab" id="experience">
                         <ul>
                             <li><span>Project Lead</span><br>Project lead at ISTE NSSCE,24-25</li>
                             <li><span>Intern</span><br>Babin-Technologies, Kinfra,malappuram</li>
@@ -250,6 +246,19 @@
       link.setAttribute('rel', 'noopener noreferrer');
     }
   });
+</script>
+<script>
+function switchTheme() {
+  const icon = document.querySelector("#theme-toggle");
+  document.body.classList.toggle("light-mode");
+  if (document.body.classList.contains("light-mode")) {
+    icon.classList.remove("fas fa-moon");
+    icon.classList.add("fas fa-sun");
+  } else {
+    icon.classList.remove("fas fa-sun");
+    icon.classList.add("fas fa-moon");
+  }
+}
 </script>
 
 
