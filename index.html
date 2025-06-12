@@ -12,7 +12,8 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images\logo_AT.png" class="logo">
+                <img src="images\logo_AT.png" id="logo-dark"class="logo">
+                <img src="images\logo_AT1.png" id="logo-light" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -27,8 +28,8 @@
                 <p>Welcome to My Portfolio</p>
                 <h1>Hi ,I'm <span>Abijith T.</span></h1>
             </div>
-            <button id="theme-toggle">
-                <i class="fas fa-moon" onclick="switchTheme()"></i>
+            <button id="theme-toggle" onclick="switchTheme()">
+                <i class="fas fa-moon" ></i>
             </button>
         </div>
     </div>
@@ -249,16 +250,26 @@
 </script>
 <script>
 function switchTheme() {
-  const icon = document.querySelector("#theme-toggle");
+  const icon = document.querySelector("#theme-toggle i"); 
+  const logoDark = document.getElementById("logo-dark");
+  const logoLight = document.getElementById("logo-light");
+
   document.body.classList.toggle("light-mode");
+
   if (document.body.classList.contains("light-mode")) {
-    icon.classList.remove("fas fa-moon");
-    icon.classList.add("fas fa-sun");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+    logoDark.style.display = "none";
+    logoLight.style.display = "block";
   } else {
-    icon.classList.remove("fas fa-sun");
-    icon.classList.add("fas fa-moon");
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+    logoDark.style.display = "block";
+    logoLight.style.display = "none";
   }
 }
+
+
 </script>
 
 

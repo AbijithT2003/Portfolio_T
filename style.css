@@ -43,11 +43,14 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }   
-
+#logo-light{
+    display: none;
+}
 .logo
 {
   width: 140px;
 }
+
 nav ul li{
     list-style: none;
     display: inline-block;
@@ -439,6 +442,7 @@ body.light-mode #header {
 body.light-mode #about {
   background-color: #FFEDFA;
 }
+
 body.light-mode .about-img {
   filter: brightness(0.8);
 }
@@ -516,7 +520,7 @@ body.light-mode .social-icons a {
 }
 body.light-mode form input,
 body.light-mode form textarea {
-  background: #f1a1a1;
+  background: #f1e1e1;
   color: #BE5985;
 }
 body.light-mode form .btn2 {
