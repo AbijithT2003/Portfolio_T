@@ -1,54 +1,71 @@
-# 🚀 Abijith T's Portfolio Website
+#  Abijith T's Portfolio Website
 
-This is a personal portfolio website showcasing my skills, academic background, and projects in Deep Learning, IoT, Embedded Systems, and Full-Stack Web Development.
+This is a personal portfolio website showcasing my skills, academic background, and projects .
 
----
+## 🔗 Live Website
+[Visit the website](https://abijitht2003.github.io/Portfolio_T/) 
 
 ## 📌 Features
 
-- Responsive web design with HTML/CSS
+- Responsive web design with HTML/CSS&JavaScript
 - Sections for About, Skills, Projects, and Contact
-- Smooth tab navigation in "About" section
+- Smooth tab navigation section
 - Project hover overlays with external links
 - GitHub-integrated project buttons
+- light and dark theme modes
+- Google sheet connectedd for Contact and Message storage
+- 
+## 🚀 Features by Section
 
+### 🔍 About Section
+
+* Profile picture 
+* Short professional bio
+* Tabbed interface for:
+  
+  * **Experience**: Summary of past roles/internships
+  * **Education**: Academic background and certifications
+
+### 🧠 Skills Section
+
+* Categorized list 
+* Icon-based representation 
+* Hover effetcs with font and colour change
+
+### 🧩 Projects Section
+
+*  grid layout
+* Hover effects on project thumbnails
+* "See More" buttons linking to:
+  * GitHub repositories
+
+### 📬 Contact Section
+
+* Functional contact form with:
+
+  * Name, Email, and Message fields
+  * Data stored in Google Sheets 
+* External links to:
+
+  * GitHub
+  * LinkedIn
+  * Email
 ---
 
-## 🧠 Highlighted Projects
+## 🌙 Light/Dark Theme Toggle
 
-### 🔍 1. Multimodal Human Detection System
-A deep learning project using RGB, Thermal, and Infrared images for disaster-rescue scenarios.  
-**Tech Stack:** PyTorch, Swin Transformer, Optuna, COCO-style annotations.
-
-### 💧 2. IoT-Based IV Bag Monitoring
-An ESP32-based hospital monitoring system that alerts caregivers when IV fluid drops below safe levels.  
-**Tech Stack:** ESP32, Arduino IDE, Capacitive sensors, Blynk.
-
-### 🧮 3. Verilog FSM Design
-UART Receiver and PWM Controller designed using Verilog and simulated on ModelSim for FPGA-based communication systems.  
-**Tools:** Verilog, Intel Quartus, ModelSim.
-
+* Theme toggle button with sun/moon icon
+* Switches between dark and light modes
+* Automatically updates logo and theme colors
 ---
 
-## 💡 Skills
+## Tech Stack
 
-- Deep Learning (DETR, CNNs, Swin Transformer)
-- Embedded Systems (Raspberry Pi, Arduino, FPGA)
-- Web Development (HTML, CSS, JavaScript)
-- IoT & Real-Time Monitoring
-- Verilog HDL, Quartus, ModelSim
-
----
-
-## 📫 Contact
-
-Feel free to connect with me:
-
-- **LinkedIn:** [linkedin.com/in/yourname](#)
-- **Email:** abijith@example.com
-- **Portfolio Website:** [View Live Site](#)
-
----
+- **HTML5** –  layout
+- **CSS3** – animations, flexbox, grid, custom styling
+- **JavaScript** – DOM manipulation, interactivity
+- **FontAwsome**- for icons
+- **Google Sheets** -for storage
 
 ## 📝 License
 
