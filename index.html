@@ -33,7 +33,7 @@
             </button>
         </div>
     </div>
-
+    
 <!-------------------about------------>        
     <div id="about">
         <div class="container">
@@ -80,38 +80,37 @@
                 <div >
                     <i class="fa-solid fa-laptop-code"></i>
                     <h2>Deep Learning & Computer Vision</h2>
-                    <p> Proficient in CNNs, transformers, and DETR for human/object detection tasks.</p>
-                    
-                </div>
-                <div>
-                    <i class="fa-solid fa-microchip"></i>
-                    <h2>Embedded Systems</h2>
-                    <p>Experience with Raspberry Pi, ESP32, Arduino, Verilog, Intel Quartus & Xilinx FPGA toolchains.</p>
-                    
+                    <button onclick="showPopup('dl')">Know More</button>
                 </div>
                 <div>
                     <i class="fa fa-code" aria-hidden="true"></i>
                     <h2>Programming Languages</h2>
-                    <p>Python, C, Verilog, HTML/CSS/JavaScript.</p>
-                   
+                    <button onclick="showPopup('code')">Know More</button>
                 </div>
                 <div>
-                    <i class="fas fa-laptop-code"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Built clean, responsive web interfaces using modern CSS frameworks and accessibility principles.</p>
-                    
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Embedded Systems</h2>
+                     <button onclick="showPopup('embedded')">Know More</button>
                 </div>
                 <div >
                     <i class="fa-solid fa-wifi"></i>
                     <h2>IoT & Sensors</h2>
-                    <p>Designed and deployed sensor-based IoT systems with real-time alerts and remote monitoring.</p>
-                
+                    <button onclick="showPopup('iot')">Know More</button>
                 </div>
             </div>
         </div>
     </div>
 
-
+<!-- Popup Modal -->
+<div id="skill-popup" class="popup-box">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2 id="popup-title">Skill Details</h2>
+    <div class="skills-table" id="popup-body">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</div>
 <!-------------------project section--------------->        
     <div id="projects">
         <div class="container">
@@ -220,6 +219,72 @@
         sidemenu.style.right = "-200px";
     }
     </script>
+
+    <script>
+  const popupBox = document.getElementById("skill-popup");
+  const popupTitle = document.getElementById("popup-title");
+  const popupBody = document.getElementById("popup-body");
+
+  const skillData = {
+    dl: {
+      title: "Deep Learning & Computer Vision",
+      content: `
+        <table>
+          <tr><td>Convolutional Neural Networks (CNNs)</td><td>90%</td></tr>
+          <tr><td>Transformers</td><td>85%</td></tr>
+          <tr><td>DETR</td><td>80%</td></tr>
+          <tr><td>OpenCV</td><td>75%</td></tr>
+        </table>
+      `
+    },
+    embedded: {
+      title: "Embedded Systems",
+      content: `
+        <table>
+          <tr><td>Raspberry Pi</td><td>85%</td></tr>
+          <tr><td>ESP32</td><td>80%</td></tr>
+          <tr><td>FPGA (Xilinx/Quartus)</td><td>75%</td></tr>
+          <tr><td>Verilog/SystemVerilog</td><td>80%</td></tr>
+        </table>
+      `
+    },
+    code: {
+      title: "Programming Languages",
+      content: `
+        <table>
+          <tr><td>Python</td><td>90%</td></tr>
+          <tr><td>C</td><td>80%</td></tr>
+          <tr><td>Verilog</td><td>75%</td></tr>
+          <tr><td>HTML/CSS/JS</td><td>50%</td></tr>
+        </table>
+      `
+    },
+    iot: {
+      title: "IoT & Sensors",
+      content: `
+        <table>
+          <tr><td>IoT Prototyping</td><td>85%</td></tr>
+          <tr><td>Sensor Integration</td><td>80%</td></tr>
+          <tr><td>Remote Monitoring</td><td>75%</td></tr>
+        </table>
+      `
+    }
+  };
+
+  function showPopup(skillKey) {
+    console.log("Showing popup for skill:", skillKey);
+    const skill = skillData[skillKey];
+    if (skill) {
+      popupTitle.innerHTML = skill.title;
+      popupBody.innerHTML = skill.content;
+      popupBox.style.display = "flex";
+    }
+  }
+
+  function closePopup() {
+    popupBox.style.display = "none";
+  }
+</script>
 
     
 <script>

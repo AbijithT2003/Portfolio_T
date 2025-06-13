@@ -12,7 +12,7 @@ body{
     color: #fff;
 }
 #theme-toggle {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 30px;
   font-size: 24px;
@@ -78,7 +78,13 @@ nav ul li a:hover::after{
 }
 .header-text
 {
-    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin-top: -18vh;
     font-size: 30px;
     font-weight: 600;
 }
@@ -88,7 +94,47 @@ header-text h1{
 }
 .header-text h1 span{
     color: #ff004f;
-}   
+}  
+.animated-typing {
+  font-size: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  animation: fadeSlideUp 0.5s ease-out forwards, typingLoop 4s steps(25, end) infinite;
+  animation-delay: .2s, 0.5s;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typing loop */
+@keyframes typingLoop {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 100%;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+
 /*-------------about section------------------*/
 
 #about{
@@ -207,6 +253,79 @@ header-text h1{
 }
 .skills-list div:hover a{
     color: #f1f516;
+}
+/*---------------popup------------------*/
+.skills-list div button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.skills-list div:hover button {
+    background-color: #f1f516;
+    color: #262626;
+    border-color: #f1f516;
+}
+.popup-box {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup-content {
+    background: #262626;
+    color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.skills-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.skills-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /*-------------project section------------------*/
@@ -352,10 +471,11 @@ form .btn2{
 .copyright{
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 5px 0;
     background: #262626;
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: -50px;
 }
 
 #msg{
@@ -372,13 +492,13 @@ nav .fa-solid.fa-xmark{
 }
 @media only screen and (max-width: 600px){
     .header-text{
-        margin-top: 100%;
+        margin-top: -10vh;
         font-size: 16px;
     }#logo-light{
         display: none;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 40px;
     }
     nav .fa-solid.fa-bars{
         display: block;
@@ -431,6 +551,8 @@ nav .fa-solid.fa-xmark{
     }
     .copyright{
         font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: -100px;
     }
 }
 /*-----------------CSS for light mode------------------*/
